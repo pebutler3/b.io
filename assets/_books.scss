@@ -1,0 +1,29 @@
+.books {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  &__book-card {
+    background-position: center center;
+    cursor: pointer;
+    margin: 2rem;
+    max-width: 300px;
+    max-height: 300px;
+    position: relative;
+    transition: transform 250ms ease-in;
+
+    h2 {
+      font-size: 1rem;
+      text-align: center;
+    }
+
+    &:hover {
+      transform: scale(1.05);
+    }
+
+    > img {
+      height: 100%;
+      width: auto;
+    }
+  }
+}

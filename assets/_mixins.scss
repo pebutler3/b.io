@@ -1,0 +1,21 @@
+@use 'colors' as color;
+
+@mixin button ($bg: color.$purple, $color: color.$white) {
+  background-color: $bg;
+  border: none;
+  color: $color;
+  cursor: pointer;
+  padding: 1rem;
+  transition: background-color 200ms linear;
+
+  &:hover {
+    background-color: darken($bg, 5%);
+  }
+}
+
+@mixin select {
+  background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) no-repeat 98% color.$darkGrey;
+  cursor: pointer;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
