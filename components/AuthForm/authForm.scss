@@ -1,0 +1,69 @@
+@use '~/assets/colors' as color;
+@use '~/assets/mixins' as mixin;
+
+.signup-form, .login-form {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  margin: auto;
+  max-width: 50%;
+
+  img {
+    height: 74px;
+    margin: 1rem auto;
+    max-width: 210px;
+    width: 100%;
+  }
+
+  label {
+    display: flex;
+    font-size: 1rem;
+    flex-direction: column;
+  }
+
+  button, input, select {
+    border: none;
+    font-size: inherit;
+    margin-bottom: 1rem;
+    padding: 1rem;
+  }
+
+  input {
+    background-color: color.$darkGrey;
+    border-bottom: 2px solid color.$purple;
+  }
+
+  button {
+    @include mixin.button;
+  }
+
+
+  select {
+    @include mixin.select;
+  }
+
+  em {
+    color: color.$red;
+    font-size: initial;
+  }
+
+  &__buttons {
+    display: flex;
+    flex-direction: column;
+
+    button {
+      flex: 1;
+    }
+
+    button + button {
+      background-color: transparent;
+      color: color.$purple;
+
+      &:hover {
+        background-color: color.$white;
+        text-decoration: underline;
+      }
+    }
+  }
+}
