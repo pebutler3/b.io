@@ -1,11 +1,3 @@
-
-declare module 'vue/types/vue' {
-  interface Vue {
-    $book: Book;
-    $authForm: AuthForm;
-  }
-}
-
 interface Book {
   id: string,
   title: string,
